@@ -1,2 +1,2 @@
 # test-backend-shop-api
-RESTful API 
+RESTful API for example shop
