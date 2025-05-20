@@ -1,0 +1,6 @@
+@Test.Shop.Api_HostAddress = http://localhost:5000/api/test/swagger
+
+GET {{Test.Shop.Api_HostAddress}}/
+Accept: application/json
+
+###
