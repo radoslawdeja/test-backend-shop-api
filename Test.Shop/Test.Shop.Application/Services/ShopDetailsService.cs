@@ -39,11 +39,6 @@ namespace Test.Shop.Application.Services
         /// <returns></returns>
         public async Task<IResult> UpdateAsync(ShopDetailsUpdateDto dto)
         {
-            if (dto is null)
-            {
-                return Results.NoContent();
-            }
-
             // Validate dto
             var validateResult = await shopUpdateValidator.ValidateAsync(dto);
             if (!validateResult.IsValid)
@@ -78,11 +73,6 @@ namespace Test.Shop.Application.Services
         /// <returns></returns>
         public async Task<IResult> AddAsync(ShopDetailsAddDto dto)
         {
-            if (dto is null)
-            {
-                return Results.NoContent();
-            }
-
             // Validate dto
             var validateResult = await shopAddValidator.ValidateAsync(dto);
             if (!validateResult.IsValid)
