@@ -12,7 +12,7 @@ namespace Test.Shop.Infrastructure.DAL
 {
     public static class Extensions
     {
-        private const string MigrationsEnabledFlag = "MigrationsEnabled";
+        private const string MigrationsEnabledString = "MigrationsEnabled";
         private const string AllowLoadLocalInfile = "AllowLoadLocalInfile";
 
         public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration configuration)
@@ -44,7 +44,7 @@ namespace Test.Shop.Infrastructure.DAL
             using (var serviceScope = applicationBuilder.Services.CreateScope())
             {
                 var featureManager = serviceScope.ServiceProvider.GetRequiredService<IFeatureManager>();
-                var enabled = featureManager.IsEnabledAsync(MigrationsEnabledFlag).GetAwaiter().GetResult();
+                var enabled = featureManager.IsEnabledAsync(MigrationsEnabledString).GetAwaiter().GetResult();
                 if (enabled)
                 {
                     serviceScope.MigrateDatabase();

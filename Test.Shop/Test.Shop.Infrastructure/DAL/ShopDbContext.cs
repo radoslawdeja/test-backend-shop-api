@@ -7,8 +7,8 @@ using Test.Shop.Infrastructure.DAL.Utilities;
 namespace Test.Shop.Infrastructure.DAL
 {
     /// <summary>
-    /// Aby wykonać komendy musimy mieć w Output -> PackageManager ustawiony projekt na Infrastructure.
-    /// Komendy wykonują się na obiekcie który jest ustawiony w connectionString w katalogu DesignTime.
+    /// Aby wykonać komendy musimy mieć w Package Manager Console ustawiony projekt na Infrastructure.
+    /// Komendy wykonują się w katalogu Migrations.
     /// </summary>
 
     /// <summary>
@@ -67,8 +67,8 @@ namespace Test.Shop.Infrastructure.DAL
                     .WithMany()
                     .HasForeignKey(e => e.CategoryId);
 
-                entity.Property(e => e.CreatedDate)
-                    .HasDefaultValue(DateTime.Now);
+                entity.Property(e => e.CreatedDate).HasDefaultValue(DateTime.Now);
+                entity.Property(e => e.IsActive).HasDefaultValue(true);
             });
 
             modelBuilder.Entity<ShopCategory>(entity =>
