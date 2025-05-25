@@ -32,11 +32,11 @@ docker run --detach --name shoptest-mariadb --env MARIADB_ROOT_PASSWORD=1234 -p 
 `1234` - sample password on root account  
 `3306` - default port for MariaDB  
 
-![alt text](.\img\powershell.png)
+![alt text](./img/powershell.png)
 
 In Rancher Desktop you can see new container `shoptest-mariadb`:
 
-![alt text](.\img\rancherdesktop.png)
+![alt text](./img/rancherdesktop.png)
 
 ## 5. Create migration in Visual Studio
 
@@ -49,7 +49,7 @@ Add-Migration InitShopTables -Context ShopDbContext
 
 Package Manager Console window:
 
-![alt text](.\img\packagemanager.png)
+![alt text](./img/packagemanager.png)
 
 
 ## 5. Database
@@ -63,8 +63,8 @@ User: `root`
 Password: `1234`
 Port: `3306`
 
-![alt text](.\img\heidisql_connection.png)
+![alt text](./img/heidisql_connection.png)
 
 Connect to database:
 
-![alt text](.\img\heidisql_db.png)
+![alt text](./img/heidisql_db.png)
