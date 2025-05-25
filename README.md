@@ -42,10 +42,13 @@ In Rancher Desktop you can see new container `shoptest-mariadb`:
 
 In Visual Studio you must create your first migration.  
 Open `Package Manager Console` and set "Default project" as `src\Test.Shop.Infrastructure`.  
+
 Create new migration with command:
 ```
 Add-Migration InitShopTables -Context ShopDbContext
 ```
+`InitShopTables` - migration name  
+`ShopDbContext` - your db context  
 
 Package Manager Console window:
 
@@ -60,7 +63,7 @@ Open HeidiSQL and add new connection:
 Connection type: `MariaDB or MySQL`  
 Host / IP: `127.0.0.1` or `localhost`  
 User: `root`  
-Password: `1234`
+Password: `1234`  
 Port: `3306`
 
 ![alt text](./img/heidisql_connection.png)
@@ -68,3 +71,9 @@ Port: `3306`
 Connect to database:
 
 ![alt text](./img/heidisql_db.png)
+
+## 6. Swagger
+
+Run Test.Shop.API and you can see endpoints for shop (CRUD).
+
+![alt text](./img/swagger.png)
